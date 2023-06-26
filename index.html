@@ -12,25 +12,106 @@
     </nav>
     <main>
         <h2>Vacation Contest Sign-Up Form</h2>
-        <form> <!-- TODO: Set Action and Method Properties -->
+    
             <div>
-                <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
-                <!-- TODO: Create a "lastname" input with type "text" -->
-            </div>
-            <!-- TODO: Make fieldset and legend -->
-            <!-- Todo: Email Input -->
-            <!-- Todo: Street Address Input -->
-            <!-- Todo: City, State, and Zip Inputs -->
+                <!-- "firstname" &"lastname" input -->
+                <form action="results.html" method="GET">    <!----  Action and Method -->
+                    <label for="firstname">Your First Name</label>
+                      <input type="text" id="firstname" name="firstname"> 
+                    <label for="lastname">Your Last Name</label>
+                      <input type="text" id="lastname" name="lastname"> 
+                    
+                  <fieldset>
+                    <legend>Your Contact Info</legend>
+                      <label for="email">Your Email</label>
+                         <input type="text" id="email" name="email"> 
+                        <!-- Todo: Street Address Input -->
+                    <form action="results.html" method="GET"> 
+                       <label for="streetaddres">Street Address</label>
+                          <input type="text" id="streetaddres" name="streetaddres"> 
+                       <label for="city">City</label>
+                          <input type="text" id="city" name="city">
+                    <!-- State input -->
+                    <label for="state-list"> State</label>
+                    <input list="state-list" name="state" id="state">
+                      <!-- <select name="state">  -->
+                        <datalist id="state-list">
+                             <option value="IL">Illinois</option>
+                             <option value="FL">Florida</option>
+                             <option value="HI">Hawaii</option>
+                             <option value="NY">New York</option>
+                             <option value="AZ">Arizona</option>
+                             <option value="CA">California</option>
+                             <option value="AK">Alaska</option>
+                             <option value="IN">Indiana</option>
+                             <option value="MI">Michigan</option>
+                             <option value="OH">Ohio</option>
+                             <option value="WI">Wisconsin</option>
+                             <option value="CO">Colorado</option>
+                      <!-- </select> -->
+                      </datalist>
+                        <!-- Zip Input-->
+                    <form></form>
+                        <label for="zip">Zip</label>
+                        <input type="text" id="zip" name="zip">
+                    </form>
+                   </fieldset>
+               </form>
+            </div> 
+            <!-- radio & legen inputs for destination-->
 
-            <!-- TODO: Second fieldset -->
-            <!-- TODO: Radio buttons for selecting preferred destination -->
-            <!-- TODO: Color input for selecting favorite color -->
-            <!-- TODO: Checkboxes for selecting extra add-ons -->
+            <fieldset>
+                <legend>Vacation Destinations</legend>
+                <h3>Choose your location</h3>
+                <div>
+                    <input type="radio" id="greenland" name="location" value="Greenland" checked> 
+                    <label for="aruba">Greenland</label>
+                </div>
+                <div>
+                    <input type="radio" id="japan" name="location" value="Japan"> 
+                    <label for="japan">Japan</label>
+                </div>
+                <div>
+                    <input type="radio" id="bali" name="location" value="Bali"> 
+                    <label for="reykjavik">Bali</label>
+                </div>
+                <div>
+                    <input type="radio" id="new-zealand" name="location" value="New Zealand"> 
+                    <label for="new-zealand">New Zealand</label>
+                </div>
+                <!-- Color picker -->
+                <br>
+                <br>
+                <legend>Your Favorite Color</legend>
+                <h5>Choose your Color</h5>
+                <div>
+                    <input type="color" id="color" name="color" value="#A3FF33" checked> 
+                </div>
+
+                <!-- Extra Add-Ons -->
+                <legend>Complimentary Add-Ons</legend>
+                <div>
+                    <input type="radio" id="gym access" name="extras" value="gym access" checked> 
+                    <label for="Gym access"> Gym Access </label>
+                </div>
+                <div>
+                    <input type="radio" id="breakfast" name="extras" value=" breakfast" checked> 
+                    <label for=" Breakfast">Complimentary Breakfast</label>
+                </div>
+                <div>
+                    <input type="radio" id="golf" name="extras" value=" golf" checked> 
+                    <label for=" Golf">Complimentary Golf Session</label>
+                </div>
             
-            <!-- TODO: Submit Button -->
+                    
+            </fieldset>
+           
+
+                   
+            <!-- Submit Button -->
+            <input type="submit" value="Enter the Contest">
         </form>
-    </main>
+         
     <footer>
         <h2>Resource Attributions</h2>
         <p>All images provided for free use via <a href="https://unsplash.com/">Unsplash.com</a> whose generous <a href="https://unsplash.com/license">license details can be found here</a>.</p>
