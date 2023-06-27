@@ -15,25 +15,46 @@
     
             <div>
                 <!-- "firstname" &"lastname" input -->
-                <form action="results.html" method="GET">    <!----  Action and Method -->
-                    <label for="firstname">Your First Name</label>
-                      <input type="text" id="firstname" name="firstname"> 
-                    <label for="lastname">Your Last Name</label>
-                      <input type="text" id="lastname" name="lastname"> 
-                    
+                <form action="results.html" method="GET" action="results.html"></form>    <!----  Action and Method -->
+
+                    <label for="firstname">Your First Name</label><span class="required-field">*</span>  <!--required fields added-->
+
+                      <input type="text" id="firstname" name="firstname " required minlength="2" maxlength="35"> <!---restrictions added-->
+ 
+                    <label for="lastname">Your Last Name</label><span class="required-field">*</span>
+
+                      <input type="text" id="lastname" name="lastname"  required minlength="2" maxlength="35"  >
+                                   <!----Age requirment form-->
+                      <label for="age">Your Age</label><span class="required-field">*</span>
+                          <input type="number" name="age" id="age" min="21" max="120"><label for="pwd">Password:</label>
+                          <h5> Must be 21 and older.</h5><label for="pwd">Password:</label>
+                       
+
+                                 <!--secret passcode-->
+                     <label for="password"> Secret Password (must be 6 alphanumeric characters)</label><span class="required-field">*</span>
+                          <input type="password" id="pwd" name="pwd" required pattern="[A-Z,a-z,0-9]{5}" title="6-Character Alphanumeric Pass Code">
+                          <!----------------------------------------------------------------------->
+
                   <fieldset>
                     <legend>Your Contact Info</legend>
-                      <label for="email">Your Email</label>
-                         <input type="text" id="email" name="email"> 
+                      <label for="email">Your Email</label><span class="required-field">*</span>
+                         <input type="text" id="email" name="email">
+ 
                         <!-- Todo: Street Address Input -->
                     <form action="results.html" method="GET"> 
-                       <label for="streetaddres">Street Address</label>
-                          <input type="text" id="streetaddres" name="streetaddres"> 
-                       <label for="city">City</label>
+                       <label for="streetaddres">Street Address</label><span class="required-field">*</span>
+
+                          <input type="text" id="streetaddres" name="streetaddres">
+ 
+                       <label for="city">City</label><span class="required-field">*</span>
+
                           <input type="text" id="city" name="city">
+
                     <!-- State input -->
-                    <label for="state-list"> State</label>
+                    <label for="state-list"> State</label><span class="required-field">*</span>
+
                     <input list="state-list" name="state" id="state">
+
                       <!-- <select name="state">  -->
                         <datalist id="state-list">
                              <option value="IL">Illinois</option>
@@ -52,8 +73,8 @@
                       </datalist>
                         <!-- Zip Input-->
                     <form></form>
-                        <label for="zip">Zip</label>
-                        <input type="text" id="zip" name="zip">
+                        <label for="zip">Zip</label><span class="required-field">*</span>
+                        <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="5-Digit US ZIP Code" >
                     </form>
                    </fieldset>
                </form>
